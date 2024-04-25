@@ -3,7 +3,7 @@ import Sidebar from '../Components/Sidebar';
 import Modal from "react-modal";
 import Header2 from '../Components/Header2';
 import axios from 'axios';
-import Departments from './Departments'; // Import Departments component
+// import Departments from './Departments'; // Import Departments component
 
 const Employees = () => {
     const [employees, setEmployees] = useState([]);
@@ -17,28 +17,28 @@ const Employees = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isModalOpen1, setIsModalOpen1] = useState(false);
     const [selectedEmployees, setSelectedEmployees] = useState(null);
-    const [departments, setDepartments] = useState([]); // State to hold departments
+    // const [departments, setDepartments] = useState([]); // State to hold departments
 
     useEffect(() => {
         axios.get('http://localhost:3003/employees')
             .then(response => setEmployees(response.data))
             .catch(error => console.error('Error fetching employees:', error));
-            fetchDepartments();
+            // fetchDepartments();
 
     }, []);
 
-    const fetchDepartments = async () => {
-        try {
-            // Fetch departments from the server
-            const response = await axios.get('http://localhost:3003/departments');
-            // Extract the list of departments from the response data
-            const departmentList = response.data;
-            // Update the state with the list of departments
-            setDepartments(departmentList);
-        } catch (error) {
-            console.error('Error fetching departments:', error);
-        }
-    };
+    // const fetchDepartments = async () => {
+    //     try {
+    //         // Fetch departments from the server
+    //         const response = await axios.get('http://localhost:3003/departments');
+    //         // Extract the list of departments from the response data
+    //         const departmentList = response.data;
+    //         // Update the state with the list of departments
+    //         setDepartments(departmentList);
+    //     } catch (error) {
+    //         console.error('Error fetching departments:', error);
+    //     }
+    // };
 
 
     const toggleModal = () => {
@@ -201,20 +201,7 @@ const Employees = () => {
                                        onChange={handleChange}
                                 />
                             </div>
-                            <div>
-                                <p>Department</p>
-                                <select
-                                    name="department"
-                                    value={formData.department}
-                                    onChange={handleChange}
-                                >
-                                    <option value="">Select Department</option>
-                                    {departments.map((dep, index) => (
-                                        <option key={index} value={dep.name}>{dep.name}</option>
-                                    ))}
-                                </select>
-                            </div>
-
+                           
 
                             <div>
                                 <button type="submit">SEND</button>

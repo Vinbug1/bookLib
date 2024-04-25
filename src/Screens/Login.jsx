@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import img from "../Assets/9 Gifts Every Book Nerd Wants Their Boyfriend To Get Them In Lieu Of Flowers This Valentine's Day.jpeg"
+import img from "../Images/harvoxxlogo.png"
 import Header from '../Components/Header';
 // import axios from 'axios';
 // import baseURL from '../baseUrl';
@@ -68,7 +68,7 @@ const Login = () => {
                                 <input  type="password" placeholder='Password'  name="password"  onChange={handleChange}   />
                             </label>
                             <div className="rem">
-                                <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
+                                <p className="signin-txt">Don't have an account? <Link to='/signup'>Sign Up</Link></p>
                             </div>
                             <button type="submit">Log In</button>
                         </form>
@@ -180,3 +180,5 @@ export default Login;
 // }
 
 // export default Login
+
+//json-server --watch db.json --port 3001

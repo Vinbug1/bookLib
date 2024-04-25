@@ -1,11 +1,11 @@
 import React,{useState} from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import {BsTicketPerforated} from 'react-icons/bs';
+// import {BsTicketPerforated} from 'react-icons/bs';
 import { Literature, MultiCards, Fantasy, Science } from '../utils/Data';
 import { Link } from 'react-router-dom';
-import Modal from "react-modal";
-import DisplayDataByCategory from '../Dashboard/Components/DisplayDataByCategory';
+// import Modal from "react-modal";
+// import DisplayDataByCategory from '../Dashboard/Components/DisplayDataByCategory';
 
 const MultiCarousel = ({category}) => {
 
@@ -33,13 +33,13 @@ const MultiCarousel = ({category}) => {
   }
 };
 
-const [isModalOpen, setIsModalOpen] = useState(false);
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
-  function openModal(){
-    setIsModalOpen(true)
-  }
+// const [isModalOpen, setIsModalOpen] = useState(false);
+//   const toggleModal = () => {
+//     setIsModalOpen(!isModalOpen);
+//   };
+//   function openModal(){
+//     setIsModalOpen(true)
+//   }
 
 
     const [list1, setList1] = useState(true)

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img from "../Assets/9 Gifts Every Book Nerd Wants Their Boyfriend To Get Them In Lieu Of Flowers This Valentine's Day.jpeg";
+import img from "../Images/harvoxxlogo.png"
 import { useNavigate, Link } from 'react-router-dom';
 import Header from '../Components/Header';
 
@@ -74,7 +74,7 @@ const Signup = () => {
                 <input type="password" placeholder='Password' onChange={handleChange} name="password" />
               </label>
               <div className="rem">
-                <p>Already have an account? <Link to='/login'>Log In</Link></p>
+                <p className="signin-txt">Already have an account? <Link to='/login'>Log In</Link></p>
               </div>
               <button type="submit">Sign Up</button>
             </form>

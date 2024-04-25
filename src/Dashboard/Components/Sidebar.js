@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import '../App.css';
 import {AiFillHome } from "react-icons/ai";
-// import {FaCubes } from "react-icons/fa";
+import img from "../../Images/harvoxxlogo.png"
 import { FaCubes } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
@@ -10,7 +10,7 @@ import { IoIosSettings } from "react-icons/io";
 import { TbBooks } from "react-icons/tb";
 
 
-
+//height: 100vh;
 const Sidebar = () => {
 
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -51,7 +51,8 @@ const Sidebar = () => {
         
         <div className='logo-div'
          >
-            <h1 onClick={toggle} style={{cursor:'pointer'}}>Wit</h1>
+                               <img  onClick={toggle} src={img} alt="" />
+            {/* <h1  style={{cursor:'pointer'}}>Wit</h1> */}
         </div>
         
         {/* <FaBars className='icon' onClick={toggle} style={{cursor:'pointer'}}/> */}
